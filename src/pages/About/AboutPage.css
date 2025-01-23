@@ -1,0 +1,78 @@
+/* About Page Layout */
+.about-page {
+  font-family: Arial, sans-serif;
+  color: #333;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Prevent overall page scrolling */
+}
+
+/* Full-Width Photo Section */
+.about-photo-section {
+  height: 25%; /* Occupies 1/4 of the viewport height */
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+.about-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintains aspect ratio and fills the section */
+}
+
+/* Content Section */
+.about-content-section {
+  flex: 1; /* Occupies the remaining viewport height */
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  overflow: hidden;
+}
+
+/* Legend Section */
+.legend {
+  width: 25%;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+  background-color: #f8f9fa;
+  overflow-y: auto; /* Scrollable legend */
+}
+
+.legend h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.legend ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.legend li {
+  margin: 10px 0;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #777;
+  transition: color 0.2s ease, font-weight 0.2s ease;
+}
+
+.legend li:hover,
+.legend li:focus,
+.legend li.selected {
+  color: #000;
+  font-weight: bold;
+}
+
+/* Content Section */
+.content {
+  width: 75%;
+  padding: 20px;
+  overflow-y: auto; /* Scrollable content area */
+}

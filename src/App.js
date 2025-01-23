@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
+import WelcomePage from './pages/Welcome/WelcomePage';
+import AboutPage from './pages/About/AboutPage'; // Import AboutPage
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Helmet>
+        <title>Sai Sam Phyo Linn | Engineering Ideas into Reality</title>
+        <meta name="description" content="Welcome to Sai Sam Phyo Linn's portfolio. Explore and learn more about my work, ideas, and journey." />
+        <meta name="keywords" content="Sai Sam Phyo Linn, Portfolio, Engineering, Ideas, Projects" />
+        <meta name="author" content="Sai Sam Phyo Linn" />
+      </Helmet>
+      <div id="app-container">
+        <Navbar />
+        <div className="main-content">
+          <Routes>
+            <Route path="/" element={<WelcomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+          </Routes>
+        </div>
+        <Footer />
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
