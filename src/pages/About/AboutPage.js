@@ -1,179 +1,51 @@
 import React, { useState } from 'react';
+import aboutData from './AboutData';
 import './AboutPage.css';
 
 const About = () => {
-  const [currentPage, setCurrentPage] = useState('introduction');
+  // Initialize the current page using the first section's key or a fallback
+  const [currentPage, setCurrentPage] = useState(aboutData[0]?.key || 'default');
 
   const renderContent = () => {
-    switch (currentPage) {
-      case 'introduction':
-        return (
-          <div>
-            <h2>Introduction</h2>
-            <p>
-              Welcome to my About page! I am passionate about creating and innovating.
-              I have a strong interest in web development and enjoy working on projects
-              that challenge me and help me grow.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia
-              odio vitae vestibulum vestibulum.
-            </p>
-          </div>
-        );
-      case 'experience':
-        return (
-          <div>
-            <h2>Experience</h2>
-            <p>
-              I have several years of experience in web development, focusing on building
-              scalable and performant applications. I have worked on a variety of projects
-              ranging from small business websites to large enterprise solutions.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
-              Praesent libero. Sed cursus ante dapibus diam.
-            </p>
-            <p>
-              I have several years of experience in web development, focusing on building
-              scalable and performant applications. I have worked on a variety of projects
-              ranging from small business websites to large enterprise solutions.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
-              Praesent libero. Sed cursus ante dapibus diam.
-            </p>
-          </div>
-        );
-      case 'hobbies':
-        return (
-          <div>
-            <h2>Hobbies</h2>
-            <p>
-              When I’m not coding, you’ll find me hiking, reading, or experimenting with
-              photography. I enjoy capturing moments and exploring new places.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius,
-              ligula non tempus aliquam, nunc commodo est.
-            </p>
-            <p>
-              When I’m not coding, you’ll find me hiking, reading, or experimenting with
-              photography. I enjoy capturing moments and exploring new places.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius,
-              ligula non tempus aliquam, nunc commodo est.
-            </p>
-            <p>
-              When I’m not coding, you’ll find me hiking, reading, or experimenting with
-              photography. I enjoy capturing moments and exploring new places.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius,
-              ligula non tempus aliquam, nunc commodo est.
-            </p>
-            <p>
-              When I’m not coding, you’ll find me hiking, reading, or experimenting with
-              photography. I enjoy capturing moments and exploring new places.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius,
-              ligula non tempus aliquam, nunc commodo est.
-            </p>
-            <p>
-              When I’m not coding, you’ll find me hiking, reading, or experimenting with
-              photography. I enjoy capturing moments and exploring new places.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius,
-              ligula non tempus aliquam, nunc commodo est.
-            </p>
-            <p>
-              When I’m not coding, you’ll find me hiking, reading, or experimenting with
-              photography. I enjoy capturing moments and exploring new places.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius,
-              ligula non tempus aliquam, nunc commodo est.
-            </p>
-            <p>
-              When I’m not coding, you’ll find me hiking, reading, or experimenting with
-              photography. I enjoy capturing moments and exploring new places.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius,
-              ligula non tempus aliquam, nunc commodo est.
-            </p>
-            <p>
-              When I’m not coding, you’ll find me hiking, reading, or experimenting with
-              photography. I enjoy capturing moments and exploring new places.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius,
-              ligula non tempus aliquam, nunc commodo est.
-            </p>
-            <p>
-              When I’m not coding, you’ll find me hiking, reading, or experimenting with
-              photography. I enjoy capturing moments and exploring new places.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius,
-              ligula non tempus aliquam, nunc commodo est.
-            </p>
-            <p>
-              When I’m not coding, you’ll find me hiking, reading, or experimenting with
-              photography. I enjoy capturing moments and exploring new places.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius,
-              ligula non tempus aliquam, nunc commodo est.
-            </p>
-            <p>
-              When I’m not coding, you’ll find me hiking, reading, or experimenting with
-              photography. I enjoy capturing moments and exploring new places.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius,
-              ligula non tempus aliquam, nunc commodo est.
-            </p>
-            <p>
-              When I’m not coding, you’ll find me hiking, reading, or experimenting with
-              photography. I enjoy capturing moments and exploring new places.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius,
-              ligula non tempus aliquam, nunc commodo est.
-            </p>
-            <p>
-              When I’m not coding, you’ll find me hiking, reading, or experimenting with
-              photography. I enjoy capturing moments and exploring new places.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius,
-              ligula non tempus aliquam, nunc commodo est.
-            </p>
-            <p>
-              When I’m not coding, you’ll find me hiking, reading, or experimenting with
-              photography. I enjoy capturing moments and exploring new places.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius,
-              ligula non tempus aliquam, nunc commodo est.
-            </p>
-            <p>
-              When I’m not coding, you’ll find me hiking, reading, or experimenting with
-              photography. I enjoy capturing moments and exploring new places.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius,
-              ligula non tempus aliquam, nunc commodo est.
-            </p>
-          </div>
-        );
-      default:
-        return null;
+    // Find the section corresponding to the current page
+    const section = aboutData.find((item) => item.key === currentPage);
+
+    if (section) {
+      return (
+        <div>
+          <h2>{section.title}</h2>
+          {/* Render content as multiple paragraphs if present */}
+          {section.content &&
+            Array.isArray(section.content) && (
+              section.content.map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))
+            )}
+          {section.content && !Array.isArray(section.content) && (
+            <p>{section.content}</p>
+          )}
+          {/* Render list if present */}
+          {section.list && (
+            <ul>
+              {section.list.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          )}
+        </div>
+      );
     }
+
+    // Fallback content for corrupted or missing data
+    return (
+      <div>
+        <h2>Oops!</h2>
+        <p>
+          Something went wrong. It seems the data for this section is missing or corrupted.
+          Please try refreshing the page or contact the site administrator.
+        </p>
+      </div>
+    );
   };
 
   return (
@@ -186,32 +58,20 @@ const About = () => {
       {/* White Section with Legend and Content */}
       <div className="about-content-section">
         <div className="legend">
-          <h3>About</h3>
+          <h3>About Me!</h3>
           <ul>
-            <li
-              className={currentPage === 'introduction' ? 'selected' : ''}
-              onClick={() => setCurrentPage('introduction')}
-              role="button"
-              tabIndex={0}
-            >
-              Introduction
-            </li>
-            <li
-              className={currentPage === 'experience' ? 'selected' : ''}
-              onClick={() => setCurrentPage('experience')}
-              role="button"
-              tabIndex={0}
-            >
-              Experience
-            </li>
-            <li
-              className={currentPage === 'hobbies' ? 'selected' : ''}
-              onClick={() => setCurrentPage('hobbies')}
-              role="button"
-              tabIndex={0}
-            >
-              Hobbies
-            </li>
+            {/* Dynamically generate list items based on the data */}
+            {aboutData.map((item) => (
+              <li
+                key={item.key}
+                className={currentPage === item.key ? 'selected' : ''}
+                onClick={() => setCurrentPage(item.key)}
+                role="button"
+                tabIndex={0}
+              >
+                {item.title}
+              </li>
+            ))}
           </ul>
         </div>
 

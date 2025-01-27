@@ -10,7 +10,7 @@
 
 /* Full-Width Photo Section */
 .about-photo-section {
-  height: 25%; /* Occupies 1/4 of the viewport height */
+  height: 40%; /* Occupies 1/4 of the viewport height */
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -36,7 +36,7 @@
 
 /* Legend Section */
 .legend {
-  width: 25%;
+  width: 20%;
   padding: 20px;
   border-right: 1px solid #ddd;
   background-color: #f8f9fa;
@@ -75,4 +75,42 @@
   width: 75%;
   padding: 20px;
   overflow-y: auto; /* Scrollable content area */
+}
+
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.content p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.content ul {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+.content ul li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+
+/* Fallback Content for Missing Data */
+.content h2.fallback {
+  font-size: 2rem;
+  color: #d9534f; /* Highlighted color for error messages */
+}
+
+.content p.fallback {
+  font-size: 1.2rem;
+  color: #777;
+  line-height: 1.6;
 }
