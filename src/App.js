@@ -1,10 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
-import WelcomePage from './pages/Welcome/WelcomePage';
-import AboutPage from './pages/About/AboutPage'; // Import AboutPage
+import AppRouter from './routes/Router'; 
 
 const App = () => {
   return (
@@ -18,10 +17,7 @@ const App = () => {
       <div id="app-container">
         <Navbar />
         <div className="main-content">
-          <Routes>
-            <Route path="/" element={<WelcomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-          </Routes>
+          <AppRouter /> {}
         </div>
         <Footer />
       </div>
